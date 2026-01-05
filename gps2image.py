@@ -6,16 +6,21 @@ INPUT_FILE = 'gps.txt'
 OUTPUT_FILE = 'map_overlay.png'
 MAP_SIZE = 10240
 DOT_SIZE = 5            # Increased default size for better visibility
-Z_MIN = 0               # Minimum expected elevation
-Z_MAX = 2500            # Maximum expected elevation
+Z_MIN = 500               # Minimum expected elevation
+Z_MAX = 1800            # Maximum expected elevation
 
 # --- COLOR GRADIENT CONFIGURATION ---
 # We define a "Magma-style" gradient to contrast against browns and cyans.
 # Format: (Stop_Value_0_to_1, (R, G, B))
 COLOR_STOPS = [
-    (0.0, (45, 0, 75)),    # Deep Purple (Low elevation)
-    (0.5, (220, 20, 60)),  # Crimson/Pink (Mid elevation)
-    (1.0, (255, 165, 0))   # Bright Orange (High elevation)
+    # (0.0, (45, 0, 75)),    # Deep Purple (Low elevation)
+    # (0.5, (220, 20, 60)),  # Crimson/Pink (Mid elevation)
+    # (1.0, (255, 165, 0))   # Bright Orange (High elevation)
+    (0.0, (0, 51, 204)),    # Dark Blue (Low elevation)
+    (0.25, (204, 0, 204)),  # Purple/Pink (Mid elevation)
+    (0.5, (0, 153, 51)),  # Green (Mid elevation)
+    (0.75, (255, 165, 0)),  # Orange (Mid elevation)
+    (1.0, (204, 0, 0))   # Red (High elevation)
 ]
 
 def get_color_from_z(z):
