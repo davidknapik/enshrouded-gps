@@ -8,10 +8,16 @@
       <AssemblerScript>/*
 
 
-Cinder Vault Coordinates:
+Cinder Vault Coordinates (4 bytes):
 Xcoord: 3695
 Ycoord: 1216
 Zcoord: 902
+
+
+Build Version 890625
+X Coordinate: enshrouded.exe+1D34782+2
+Z Coordinate: enshrouded.exe+1D34782+A
+Y Coordinate: enshrouded.exe+1D34782+12
 
 Build Version 874630
 X Coordinate: enshrouded.exe+1D2C574
@@ -24,6 +30,7 @@ Be careful when searching for the x/y coordinates.
 The camera coordinate is very similar/close to the player position,
 The camera coordinates change values when looking around with the camera.
 
+Update LUA script with xyz coordinate addresses
 
 F5 to enable the gps tracking.
 Output to file d:\games\enshrouded\gps.txt
@@ -87,25 +94,23 @@ db 29 6E 04
 </AssemblerScript>
     </CheatEntry>
     <CheatEntry>
-      <ID>5</ID>
-      <Description>"Xcoord"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>enshrouded.exe+1D2C574</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>9</ID>
-      <Description>"Ycoord"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>enshrouded.exe+1D2C584</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>10</ID>
+      <ID>11</ID>
       <Description>"Zcoord"</Description>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
-      <Address>enshrouded.exe+1D2C57C</Address>
+      <Address>enshrouded.exe+1D34782+A</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"Xcoord"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>enshrouded.exe+1D34782+2</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"Ycoord"</Description>
+      <VariableType>2 Bytes</VariableType>
+      <Address>enshrouded.exe+1D34782+12</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -171,9 +176,9 @@ db 29 6E 04
     </Structure>
   </Structures>
   <LuaScript>-- CONFIGURATION
-local Xaddr = "enshrouded.exe+1D2C574"
-local Zaddr = "enshrouded.exe+1D2C57C"
-local Yaddr = "enshrouded.exe+1D2C584"
+local Xaddr = "enshrouded.exe+1D34782+2"
+local Zaddr = "enshrouded.exe+1D34782+A"
+local Yaddr = "enshrouded.exe+1D34782+12"
 
 
 local interval = 2000 -- 2 seconds
