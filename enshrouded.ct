@@ -7,23 +7,29 @@
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>/*
 
+What to do when there is a new version.
+
 
 Cinder Vault Coordinates (4 bytes):
-Xcoord: 3695
-Ycoord: 1216
-Zcoord: 902
+       Xcoord: 3695
+       Ycoord: 1216
+       Zcoord: 902
 
+
+Build Version 893400 (2026-01-26)
+      X Coordinate: enshrouded.exe+1D35782+2
+      Z Coordinate: enshrouded.exe+1D35782+A
+      Y Coordinate: enshrouded.exe+1D35782+12
 
 Build Version 890625
-X Coordinate: enshrouded.exe+1D34782+2
-Z Coordinate: enshrouded.exe+1D34782+A
-Y Coordinate: enshrouded.exe+1D34782+12
+      X Coordinate: enshrouded.exe+1D34782+2
+      Z Coordinate: enshrouded.exe+1D34782+A
+      Y Coordinate: enshrouded.exe+1D34782+12
 
 Build Version 874630
-X Coordinate: enshrouded.exe+1D2C574
-Z Coordinate: enshrouded.exe+1D2C57C
-Y Coordinate: enshrouded.exe+1D2C584
-
+      X Coordinate: enshrouded.exe+1D2C572+2
+      Z Coordinate: enshrouded.exe+1D2C572+A
+      Y Coordinate: enshrouded.exe+1D2C572+12
 
 Note:
 Be careful when searching for the x/y coordinates.
@@ -94,23 +100,22 @@ db 29 6E 04
 </AssemblerScript>
     </CheatEntry>
     <CheatEntry>
-      <ID>11</ID>
-      <Description>"Zcoord"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>enshrouded.exe+1D34782+A</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>12</ID>
+      <ID>5</ID>
       <Description>"Xcoord"</Description>
       <VariableType>4 Bytes</VariableType>
-      <Address>enshrouded.exe+1D34782+2</Address>
+      <Address>enshrouded.exe+1D35782+2</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>13</ID>
+      <ID>6</ID>
       <Description>"Ycoord"</Description>
       <VariableType>2 Bytes</VariableType>
-      <Address>enshrouded.exe+1D34782+12</Address>
+      <Address>enshrouded.exe+1D35782+12</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"Zcoord"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>enshrouded.exe+1D35782+A</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -176,9 +181,9 @@ db 29 6E 04
     </Structure>
   </Structures>
   <LuaScript>-- CONFIGURATION
-local Xaddr = "enshrouded.exe+1D34782+2"
-local Zaddr = "enshrouded.exe+1D34782+A"
-local Yaddr = "enshrouded.exe+1D34782+12"
+local Xaddr = "enshrouded.exe+1D35782+2"
+local Zaddr = "enshrouded.exe+1D35782+A"
+local Yaddr = "enshrouded.exe+1D35782+12"
 
 
 local interval = 2000 -- 2 seconds
